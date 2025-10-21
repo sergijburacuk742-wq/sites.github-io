@@ -1,1 +1,142 @@
-# sites.github-io
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій Розклад на Семестр</title>
+    <style>
+        /* Базові стилі для всієї сторінки */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Стилі для заголовка */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        /* Стилі для таблиці */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        /* Стилі для заголовків таблиці (Дні та Час) */
+        .schedule-table th {
+            background-color: #000000;
+            color: white;
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        /* Стилі для клітинок таблиці */
+        .schedule-table td {
+            padding: 10px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+            height: 60px; /* Фіксована висота для однакового вигляду */
+        }
+
+        /* Стилі для непарних рядків (для кращої читабельності) */
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* Наведення миші на рядок */
+        .schedule-table tr:hover {
+            background-color: #e8f4f8;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Стилі для заповнених клітинок (Заняття) */
+        .class-entry {
+            background-color: #ecf0f1;
+            border-left: 5px solid #2ecc71; /* Виділення заняття кольором */
+            font-weight: bold;
+            color: #2c3e50;
+            line-height: 1.2;
+            cursor: help;
+        }
+
+        /* Стилі для порожніх клітинок */
+        .free-time {
+            background-color: #fff;
+            color: #95a5a6;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>📚 Мій Розклад Занять на Осінній Семестр</h1>
+
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th>Час / День</th>
+                <th>Понеділок</th>
+                <th>Вівторок</th>
+                <th>Середа</th>
+                <th>Четвер</th>
+                <th>П'ятниця</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08:30 - 09:50</td>
+                <td class="free-time">Вікно</td>
+                <td class="class-entry" title="Викладач: Сіжук., Аудиторія: 84">Укр. літ</td>
+                <td class="class-entry" title="Викладач: Лябук., Аудиторія: 27">Основ програмування(пр)</td>
+                <td class="class-entry" title="Викладач: Завіша., Аудиторія: 29">Інформатика</td>
+                <td class="class-entry" title="Викладач: Табачук/Великий., Аудиторія: 35/29">Фізика/Комп графіка (лекція)</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:20</td>
+                <td class="class-entry" title="Викладач: Пішко Л., Аудиторія: 91">Географія</td>
+                <td class="class-entry" title="Викладач: Фізика., Аудиторія: 74">Фізика</td>
+                <td class="class-entry" title="Викладач: Остапюк., Аудиторія: 27">Алгоритми(пр)</td>
+                <td class="class-entry" title="Викладач: Аврамук., Аудиторія: 14">Історія України</td>
+                <td class="class-entry" title="Викладач: Невідомо., Аудиторія: 34">Іноземна мова</td>
+            </tr>
+            <tr>
+                <td>11:20 - 12:00</td>
+                <td class="free-time">Обід</td>
+                <td class="free-time">Обід</td>
+                <td class="free-time">Обід</td>
+                <td class="free-time">Обід</td>
+               <td class="free-time">Обід</td>
+            </tr>
+            <tr>
+                <td>12:00 - 13:20</td>
+                <td class="class-entry" title="Викладач: Остапюк., Аудиторія: 21">Алгоритми (лекція)</td>
+                <td class="class-entry" title="Викладач: Лябук., Аудиторія: 45">Основ Програмування(лекція)</td>
+                <td class="class-entry" title="Викладач: Остапюк., Аудиторія: 27">ТРПЗ(пр)</td>
+                <td class="class-entry" title="Викладач: Вихор., Аудиторія: СЗ">Фіз культ</td>
+                <td class="class-entry" title="Викладач: Остапюк., Аудиторія: 29">ТРПЗ (лекція)</td>
+            </tr>
+            <tr>
+                <td>13:30 - 14:50</td>
+               <td class="class-entry" title="Викладач: Великий/Вихор., Аудиторія: 27/СЗ">Комп графіка/Фіз культ</td>
+                <td class="class-entry" title="Викладач: Бицька., Аудиторія: 71">Укр мова</td>
+                <td class="class-entry" title="Викладач: Великий., Аудиторія: 27">Комп графіка(пр)</td>
+                <td class="free-time">Вікно</td>
+                <td class="class-entry" title="Викладач: Случик., Аудиторія: 51">Математика</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
